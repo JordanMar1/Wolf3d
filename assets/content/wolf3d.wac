@@ -1,0 +1,126 @@
+#weapon:
+name:colt:
+sprite:assets/weapons/colt.png:
+sound:assets/sounds/colt.ogg:
+dmg:10:
+ammo:200:
+firerate:1:
+fire_distance:10:
+id:1:
+#weapon:
+name:cutter:
+sprite:assets/weapons/cutter.png:
+sound:assets/sounds/cutter.ogg:
+dmg:20:
+ammo:-1:
+firerate:1:
+fire_distance:1:
+id:0:
+#weapon:
+name:grease_gun:
+sprite:assets/weapons/grease_gun.png:
+sound:assets/sounds/grease_gun.ogg:
+dmg:20:
+ammo:500:
+firerate:2:
+fire_distance:30:
+id:1:
+#weapon:
+name:minigun:
+sprite:assets/weapons/minigun.png:
+sound:assets/sounds/minigun.ogg:
+dmg:20:
+ammo:1000:
+firerate:3:
+fire_distance:50:
+id:0:
+#map:
+name:begin
+id:0:
+content:
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+W        E                                     E             W   E D     W
+WWWWWW             E               E                         W           W
+W    W        E                            WWWWWW    W        W  E       W
+W S  W  E            E          E          W     E   W        W          W
+W    WWWWWWW                               WWWWWWWWWWWWWWWWWWWW      E   W
+W                           E         E                                  W
+W    E        E                                              E           W
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW:
+#map:
+name:end:
+id:1:
+content:
+WWWWWWWWWWWW
+WS     W   W
+W WWWW W W W
+W W    W WDW
+W W WWWW W W
+W        W W
+WWWWWWWWWWWW:
+#map:
+name:end:
+id:1:
+content:
+WWWWWWWWWWWWWWWWWW
+WS     W     W   W
+W WWWW WWWWW W W W
+W   W     W     DW
+WWW WWWWW WWWWWWWW
+W     E   W     WW
+WWWWWWWWWWWWWWWWWW:
+#map:
+name:end:
+id:1:
+content:
+WWWWWWWWWWWWWWWWWWWW
+WS     W     W    W
+W WWWW WWWWW WWWW W
+W   W     W     W W
+WWW WWWWW WWWWW W W
+W     W   W   W W W
+W WWWWW W W W W W W
+W     W W W W W   W
+WWW W W W W WWWWWWW
+W   W W W W       W
+W WWWWWWW WWWWWWW W
+W       W     W   W
+WWWWWWWWWWWW WWWW W
+W     W     W     W
+W WWWWWWWWWWWWWWW W
+W   W     E     W W
+WWW W WWWWWWWWW W W
+W     W       W   D
+WWWWWWWWWWWWWWWWWWWW:
+#map:
+name:end:
+id:1:
+content:
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WS     W     W         W   W
+W WWWW WWWWW WWWWWWWWW W W W
+W     W     W     W   W W W
+W WWWWWWWWW W WWW W W W W W
+W W     W   W   W W W W   W
+W W WWW WWWWWWW W W WWWWWWW
+W W   W       W W         W
+W WWWWWWWWWW W WWWWWWWWWWW
+W       W   W W         W W
+WWWWWWW WWWWW WWWWWWWW W W
+W     W       W     W W W W
+W WWWWWWWWWWWWW W WWW W W W
+W   E     W     W     W   D
+WWWWWWWWWWWWWWWWWWWWWWWWWWWW:
+#map:
+content:
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WS       W       W       W         W  W
+W WWWWW WWW WWW WWWWWWW WWWWWWWWW W WW
+W     W     W W     W W       W   W  W
+WWW W WWWWWWW W WWWWW WWWWWW WWWWW WW
+W   W W       W     W     W W     W  W
+W WWWWW WWWWWWWWWWW WWWWW W W WWWWW WW
+W     W     W     W     W   W     W  DW
+W WWWWWWWWW WWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+

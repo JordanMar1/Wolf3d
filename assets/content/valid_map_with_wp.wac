@@ -1,0 +1,18 @@
+#map:
+name:begin
+id:0:
+content:
+WWWWWW
+W S  W
+W    W
+W D  W
+WWWWWW:
+#weapon:
+name:minigun:
+sprite:assets/weapons/minigun.png:
+sound:assets/sounds/colt.ogg:
+dmg:20:
+ammo:1000:
+firerate:1:
+fire_distance:50:
+id:0:
