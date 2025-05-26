@@ -18,7 +18,6 @@ void update_shoot_animation(weapon_t *weapon,
 
     if (!weapon)
         return;
-    printf("%d -> %f\n", weapon->firerate, firerate);
     if (seconds >= firerate) {
         if (rectangle->left != 0 && rectangle->left < 1000) {
             rectangle->left += 205;
