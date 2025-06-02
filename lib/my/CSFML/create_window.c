@@ -50,5 +50,6 @@ wd_t *create_window(int vm)
         NULL);
     window->sprite = sfSprite_create();
     window->music_muted = 0;
+    window->sound_muted = 0;
     return window;
 }

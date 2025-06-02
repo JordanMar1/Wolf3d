@@ -8,6 +8,17 @@
 #include "../include/struct.h"
 #include "../include/wolf.h"
 
+void toggle_sound(wd_t *window)
+{
+    if (window == NULL)
+        return;
+    if (window->sound_muted == 1) {
+        window->sound_muted = 0;
+        return;
+    }
+    window->sound_muted = 1;
+}
+
 // able or disables the music in the menu
 void toggle_music(wd_t *window)
 {

@@ -41,7 +41,7 @@ OBJ = $(SRC:.c=.o)
 
 CFLAGS = -Iinclude -Ilib/my/include
 
-LIBFLAGS = -Llib -lmy -g
+LIBFLAGS = -Llib -lmy
 
 CSFML = -lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio -lm
 

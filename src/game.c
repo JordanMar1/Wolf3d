@@ -21,10 +21,14 @@ static int is_file_err(player_t *player)
 static void destroy_game(menu_t *menu, sfClock *clock, wd_t *window,
     data_t *data)
 {
-    destroy_menu(menu);
-    sfClock_destroy(clock);
-    free_window(window);
-    free_data(data);
+    if (menu)
+        destroy_menu(menu);
+    if (clock)
+        sfClock_destroy(clock);
+    if (window)
+        free_window(window);
+    if (data)
+        free_data(data);
 }
 
 // manage events to close the window
@@ -57,7 +61,7 @@ static void refresh_window(wd_t *wd,
         display_ammo(window, data->player->weapon->ammo,
             sfRenderWindow_getSize(window));
         handle_change_weapon(data->player, wd->event);
-        handle_shoot(data->player, wd->event);
+        handle_shoot(data->player, wd);
     }
     draw_minimap(window, map, data->player);
     display_head(wd->head, window,
@@ -105,8 +109,8 @@ static void game_loop(sfClock *clock, wd_t *window, data_t *data, menu_t *menu)
     while (sfRenderWindow_isOpen(window->window)) {
         frame_time = sfTime_asSeconds(sfClock_restart(clock));
         if (menu_status != 1) {
-                        menu_status = handle_menu_events(window->window, menu,
-                            window);
+            menu_status = handle_menu_events(window->window, menu,
+                window);
             draw_menu(window->window, menu);
         } else {
             play_music(window, data);

@@ -34,17 +34,19 @@ void update_shoot_animation(weapon_t *weapon,
 
 //looks when the left mouse click happens
 void trigger_shoot(weapon_t *weapon, sfIntRect *rectangle,
-    sfClock *clock, sfEvent event)
+    sfClock *clock, wd_t *window)
 {
     sfTime time = sfClock_getElapsedTime(clock);
     float seconds = sfTime_asSeconds(time);
+    sfEvent event = window->event;
 
     if (!weapon)
         return;
     if (event.type == sfEvtMouseButtonPressed &&
         rectangle->left == 0 && seconds >= 0.1f && weapon->ammo != 0) {
         weapon->ammo--;
-        sfSound_play(weapon->sound);
+        if (window->sound_muted == 0)
+            sfSound_play(weapon->sound);
         rectangle->left += 205;
         sfSprite_setTextureRect(weapon->sprite, *rectangle);
         sfClock_restart(clock);
@@ -52,7 +54,7 @@ void trigger_shoot(weapon_t *weapon, sfIntRect *rectangle,
 }
 
 //makes the animation of the shoot
-void handle_shoot(player_t *player, sfEvent event)
+void handle_shoot(player_t *player, wd_t *window)
 {
     weapon_t *weapon = player->weapon;
     static sfIntRect rectangle = {0, 0, 205, 205};
@@ -61,5 +63,5 @@ void handle_shoot(player_t *player, sfEvent event)
     if (!clock)
         clock = sfClock_create();
     update_shoot_animation(weapon, &rectangle, clock);
-    trigger_shoot(weapon, &rectangle, clock, event);
+    trigger_shoot(weapon, &rectangle, clock, window);
 }

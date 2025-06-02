@@ -130,6 +130,7 @@ typedef struct wd {
     sfSprite *sprite;
     sfEvent event;
     int music_muted;
+    int sound_muted;
     obj_t *head;
 } wd_t;
 
@@ -152,6 +153,8 @@ typedef struct settings {
     sfText *title;
     sfText *audio;
     sfText *video;
+    sfText *volume;
+    sfFont *font;
 } settings_t;
 
 //functions using the structures
@@ -184,7 +187,7 @@ void free_data(data_t *data);
 data_t *create_data(char *filepath, sfRenderWindow *window);
 void give_data(data_t *data, char **object, sfRenderWindow *window);
 void add_map(char **object, data_t *data);
-void handle_shoot(player_t *player, sfEvent event);
+void handle_shoot(player_t *player, wd_t *window);
 void handle_change_weapon(player_t *player, sfEvent event);
 obj_t *create_head_obj(void);
 void display_head(obj_t *head, sfRenderWindow *window, int pv,
@@ -202,9 +205,10 @@ int handle_settings_clicks(sfRenderWindow **window_ptr, wd_t *wd,
     sfText *audio, sfText *video);
 void set_video_mode(sfVideoMode *mode, int state);
 void toggle_music(wd_t *window);
-settings_t *create_struct_settings(sfRenderWindow **window_ptr,
-    sfText *title, sfText *audio, sfText *video);
+settings_t *create_struct_settings(sfRenderWindow **window_ptr);
 void add_weapon(char **object, data_t *data, sfRenderWindow *window);
 void free_weapon(weapon_t *weapon);
 void play_music(wd_t *window, data_t *data);
+void destroy_settings_texts(settings_t *set);
+void toggle_sound(wd_t *window);
 #endif /* !STRUCT_H_ */
