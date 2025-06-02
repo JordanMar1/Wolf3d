@@ -45,6 +45,7 @@ void give_player_stat(player_t *player)
     player->pos_y = -1;
     player->dirX = -1;
     player->dirY = 0;
+    player->flashlight_on = 0;
     player->planeX = 0;
     player->planeY = 0.66;
     player->angle = 0.0f;

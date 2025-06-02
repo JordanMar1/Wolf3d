@@ -24,6 +24,8 @@ static int get_nb_weapons(player_t *player)
 //changes the weapon with the numpad
 static void handle_change_button_weapon(player_t *player, sfEvent event)
 {
+    if (!player || !player->weapon)
+        return;
     if (event.key.code == sfKeyNum1 && 0 <= get_nb_weapons(player))
         change_to_id(player, 0);
     if (event.key.code == sfKeyNum2 && 1 <= get_nb_weapons(player))
