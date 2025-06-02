@@ -15,7 +15,7 @@ Le but est de créer une reproduction du jeu **WOLFENSTEIN 3D** en C grâce au m
 
 ./wolf3d [-f fichier]
 
--f : ouvre un fichier et prend ses maps pour les ouvrir et remplacer le jeu original, si cela n'existe pas, le jeu original est lancé et si une map à une erreur (par exemple pas de spawn ou une ouverture vers nulle part), le jeu retournera 84
+-f : ouvre un fichier et prend les maps et les armes pour les ouvrir et remplacer le jeu original, si cela n'existe pas, le jeu original est lancé et si une map à une erreur (par exemple pas de spawn ou une ouverture vers nulle part), le jeu retournera 84
 
 ### 🎮 COMMANDES
 
