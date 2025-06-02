@@ -92,6 +92,7 @@ typedef struct map {
     char **map;
     struct map *next;
     struct map *last;
+    sfMusic *music;
 } map_t;
 
 typedef struct save {
@@ -127,7 +128,6 @@ typedef struct wd {
     sfVideoMode vm;
     sfTexture *text;
     sfSprite *sprite;
-    sfMusic *music;
     sfEvent event;
     int music_muted;
     obj_t *head;
@@ -206,4 +206,5 @@ settings_t *create_struct_settings(sfRenderWindow **window_ptr,
     sfText *title, sfText *audio, sfText *video);
 void add_weapon(char **object, data_t *data, sfRenderWindow *window);
 void free_weapon(weapon_t *weapon);
+void play_music(wd_t *window, data_t *data);
 #endif /* !STRUCT_H_ */

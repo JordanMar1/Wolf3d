@@ -65,12 +65,20 @@ static void refresh_window(wd_t *wd,
     sfRenderWindow_display(window);
 }
 
+static void manage_old_map(map_t *old_map)
+{
+    sfMusic_stop(old_map->music);
+    free_array(old_map->map);
+    free(old_map);
+}
+
 static void check_map_transition(data_t *data, wd_t *window,
     sfClock *clock, menu_t *menu)
 {
     float dx = data->player->pos_x - data->player->end_x;
     float dy = data->player->pos_y - data->player->end_y;
     float distance = sqrtf(dx * dx + dy * dy);
+    map_t *old_map;
 
     if (distance < 1 && !data->map->next) {
         printf("You Won bravo !!");
@@ -78,7 +86,9 @@ static void check_map_transition(data_t *data, wd_t *window,
         exit(0);
     }
     if (distance < 1 && data->map->next) {
+        old_map = data->map;
         data->map = data->map->next;
+        manage_old_map(old_map);
         change_player_stat(data->player, data->map);
         if (is_file_err(data->player) == 1) {
             destroy_game(menu, clock, window, data);
@@ -99,6 +109,7 @@ static void game_loop(sfClock *clock, wd_t *window, data_t *data, menu_t *menu)
                             window);
             draw_menu(window->window, menu);
         } else {
+            play_music(window, data);
             manage_events(window, data->player);
             sfRenderWindow_setMouseCursorVisible(window->window, sfFalse);
             refresh_window(window, data,

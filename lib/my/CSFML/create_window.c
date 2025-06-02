@@ -49,7 +49,6 @@ wd_t *create_window(int vm)
     window->text = sfTexture_createFromFile("assets/objects/wall.jpg",
         NULL);
     window->sprite = sfSprite_create();
-    window->music = manage_game_music(window->music);
     window->music_muted = 0;
     return window;
 }

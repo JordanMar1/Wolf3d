@@ -38,6 +38,9 @@ static void init_map_stats(map_t *map, char **object)
         map->height = my_len_arr(map->map);
         map->length = strlen(map->map[0]);
     }
+    content = get_name("\nmusic", object);
+    if (content)
+        map->music = sfMusic_createFromFile(content);
 }
 
 // creates a node for the linked list
@@ -50,6 +53,7 @@ static map_t *create_map(int id, char **object)
     map->next = NULL;
     map->last = NULL;
     map->map = NULL;
+    map->music = NULL;
     map->id = id;
     init_map_stats(map, object);
     if (!map->map) {

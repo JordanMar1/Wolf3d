@@ -47,6 +47,7 @@ W    WWWWWWW                               WWWWWWWWWWWWWWWWWWWW      E   W
 W                           E         E                                  W
 W    E        E                                              E           W
 WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW:
+music:assets/music/at_dooms_gate.ogg:
 #map:
 name:end:
 id:1:
@@ -58,6 +59,7 @@ W W    W WDW
 W W WWWW W W
 W        W W
 WWWWWWWWWWWW:
+music:assets/music/running_from_evil.ogg:
 #map:
 name:end:
 id:1:
@@ -69,6 +71,7 @@ W   W     W     DW
 WWW WWWWW WWWW WWW
 W     E          W
 WWWWWWWWWWWWWWWWWW:
+music:assets/music/at_dooms_gate.ogg:
 #map:
 name:end:
 id:1:
@@ -92,6 +95,7 @@ W   W     E     W  W
 WWW W WWWWWWWWW W  W
 W     W       W   DW
 WWWWWWWWWWWWWWWWWWWW:
+music:assets/music/running_from_evil.ogg:
 #map:
 name:end:
 id:1:
@@ -111,6 +115,7 @@ W             W     W W  W W
 W WWWWWWWWWWWWW W WWW W  W W
 W   E     W     W     W   DW
 WWWWWWWWWWWWWWWWWWWWWWWWWWWW:
+music:assets/music/at_dooms_gate.ogg:
 #map:
 content:
 WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
@@ -121,5 +126,6 @@ WWW W WWWWWWW    W WWWWW WWWWWW WWWWW WW
 W   W       W               W W     W  W
 W WWWWW  WWWWWWWWWWW  WWWWW W W WWWWW WW
 W            W     W                  DW
-WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW:
+music:assets/music/running_from_evil.ogg:
 

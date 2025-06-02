@@ -14,7 +14,6 @@ void free_window(wd_t *window)
     sfRenderWindow_close(window->window);
     sfTexture_destroy(window->text);
     sfSprite_destroy(window->sprite);
-    sfMusic_destroy(window->music);
     sfTexture_destroy(window->head->texture);
     sfSprite_destroy(window->head->sprite);
     free(window->head);

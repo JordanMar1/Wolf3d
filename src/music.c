@@ -11,13 +11,20 @@
 // able or disables the music in the menu
 void toggle_music(wd_t *window)
 {
-    if (window == NULL || window->music == NULL)
+    if (window == NULL)
         return;
     if (window->music_muted == 1) {
-        sfMusic_setVolume(window->music, 100);
         window->music_muted = 0;
         return;
     }
-    sfMusic_setVolume(window->music, 0);
     window->music_muted = 1;
+}
+
+void play_music(wd_t *window, data_t *data)
+{
+    if (window->music_muted == 0 && data->map->music &&
+        sfMusic_getStatus(data->map->music) != sfPlaying) {
+            sfMusic_setLoop(data->map->music, sfTrue);
+            sfMusic_play(data->map->music);
+    }
 }
